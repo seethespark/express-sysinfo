@@ -1,5 +1,5 @@
 # express-sysinfo
-Basic, batteries included system information display for Express apps.  
+Basic, batteries included system information display for Node.js Express apps.  
 In one line it can add a page to display the OS and process info available in Node.  It can also count page views to indicate system load.
 No dependancies outside Node's built in modules for now.
 
@@ -25,15 +25,15 @@ Something like this:
 Open a browser and go to http://localhost:3000/sysinfo
 
 ## Options
-express-sysinfo takes an options parameter
+express-sysinfo takes an options parameter object
 
 |Option |Purpose |Default
 |---|---|---
-|cleardownInterval|Milliseconds. Page views are stored to an array and presented from there. Higher numbers load the server less but make the display less current. Max is 15 minutes.|3000
 |returnFormat|The format to present the data. Available values are JSON, HTML or a valid template name.     |JSON
 |viewerUrl|URL path which will display the system information.  Requires the leading slash. |/sysinfo
 |countOnly | This instance only counts page views if set to true.| undefined
 |viewOnly | This instance only displays system information, it doesn't count page views.| undefined
+|cleardownInterval|Milliseconds. Page views are stored as integers and saved to an array and presented from there. Higher numbers load the server less but make the display less current. Max is 15 minutes.|3000
 
 
 ## Further usage
@@ -53,10 +53,10 @@ Note than the viewerUrl is relative to the route hence it's only a single slash 
 
 ## Using templates
 This is only tested with Handlebars. 
-If you would prefer to presentation to match the rest of your site then express-sysinfo can take a template name and use Express's render method.
+If you would prefer presentation to match the rest of your site then express-sysinfo can take a template name and use Express's request.render method.
 
 	app.use('/sysinfo', ensureAuthenticated, sysInfo({viewOnly: true, returnFormat: 'systemInfo', viewerUrl: '/'}));
-The response.render function will take the returnFormat value and add an object with all of the info values.  In the example above the following could be the template file, systemInfo.hbs
+The response.render function will take the returnFormat value as the template name and add an object with all of the info values.  In the example above the following could be the template file, systemInfo.hbs
 
 	<table>
 	<thead>
@@ -131,3 +131,14 @@ The response.render function will take the returnFormat value and add an object 
 	</tr>
 	</table>
 	
+# Licence
+
+The MIT License (MIT)
+
+Copyright (c) 2016 See The Spark
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
