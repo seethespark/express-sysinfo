@@ -131,7 +131,7 @@ The response.render function will take the returnFormat value as the template na
 	</tr>
 	</table>
 	
-# Licence
+# License
 
 The MIT License (MIT)
 
