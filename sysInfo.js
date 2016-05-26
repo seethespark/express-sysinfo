@@ -1,6 +1,4 @@
-'use strict';
-
-const os = require('os');
+var os = require('os');
 
 var sysinfoCounter = 0,
   sysinfoCounters = [];
@@ -119,7 +117,7 @@ function sysInfo (options) {
     if (req.url === options.viewerUrl && req.method === 'GET' && options.countOnly !== true) {
       var procPageviews = 0, procPageviewsSec = 0, procPageviewsSec1 = 0, procPageviewsSec5 = 0, procPageviewsSec15 = 0, procPageviewsSec60 = 0;
 
-      for(let i = 0, l = sysinfoCounters.length; i < l; i++) {
+      for(var i = 0, l = sysinfoCounters.length; i < l; i++) {
         procPageviews+= sysinfoCounters[i];
         if (i <= Math.round(15 / (options.cleardownInterval/1000))) { // 15 second average
           procPageviewsSec = procPageviews / 15;

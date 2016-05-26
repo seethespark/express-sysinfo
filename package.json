@@ -1,0 +1,24 @@
+{
+  "name": "express-sysinfo",
+  "version": "1.0.1",
+  "description": "Basic, batteries included system information display for Express apps.",
+  "main": "sysInfo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seethespark/express-sysinfo.git"
+  },
+  "keywords": [
+    "express",
+    "system",
+    "process"
+  ],
+  "author": "Nick Whiteley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seethespark/express-sysinfo/issues"
+  },
+  "homepage": "https://github.com/seethespark/express-sysinfo#readme"
+}
