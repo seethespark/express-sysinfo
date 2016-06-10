@@ -95,7 +95,7 @@ function cleardown(interval) {
 
 /**
  * Get a function which matches the standard Express handler.  The inner function gets system information and sends it out on the response
- * @param {object} options - map of available options.  cleardownInterval, returnFormatm viewerUrl, viewOnly, countOnly
+ * @param {object} options - map of available options.  cleardownInterval, returnFormat, viewerUrl, viewOnly, countOnly
  * 
  */
 function sysInfo (options) {
