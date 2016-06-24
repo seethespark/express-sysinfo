@@ -29,11 +29,12 @@ express-sysinfo takes an options parameter object
 
 |Option |Purpose |Default
 |---|---|---
-|returnFormat|The format to present the data. Available values are JSON, HTML or a valid template name.     |JSON
+|returnFormat|The format to present the data. Available values are JSON, HTML or a valid template name.     |HTML
 |viewerUrl|URL path which will display the system information.  Requires the leading slash. |/sysinfo
 |countOnly | This instance only counts page views if set to true.| undefined
 |viewOnly | This instance only displays system information, it doesn't count page views.| undefined
 |cleardownInterval|Milliseconds. Page views are stored as integers and saved to an array and presented from there. Higher numbers load the server less but make the display less current. Max is 15 minutes.|3000
+|maxMemoryToDisplay | The maximum memory you expect the app to use to give the Y axis chart scale.  Only used if returnFormat is HTML | 150
 
 
 ## Further usage
