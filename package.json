@@ -1,6 +1,6 @@
 {
   "name": "express-sysinfo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Basic, batteries included system information display for Express apps.",
   "main": "sysInfo.js",
   "scripts": {
