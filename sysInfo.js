@@ -65,7 +65,7 @@ function memChart(points, options) {
       yaxis[i] =  '<text x="39" y="'+ String(Math.round(ymax -ymin + 5 - ((10*i) * (ymax-ymin))/options.maxVal)) + '">'+ i*10 + options.yMarkerSuffix + '</text>';
     }
 
-    out = `<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="chart" aria-labelledby="title" role="img">
+    out = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="chart" aria-labelledby="title" role="img">
       <title id="title">A line chart showing server stats</title>
     <g class="grid x-grid" id="xGrid">
       <line x1="40" x2="40" y1="5" y2="280"></line>
