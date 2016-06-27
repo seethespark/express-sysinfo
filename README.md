@@ -52,6 +52,8 @@ After the auth checks, assuming you are using something like Passport (here in t
 	app.use('/sysinfo', ensureAuthenticated, sysInfo({viewOnly: true, returnFormat: 'HTML', viewerUrl: '/'}));
 Note than the viewerUrl is relative to the route hence it's only a single slash to route to https://myserver/sysinfo
 
+## Example output
+
 ![express-sysinfo table](/img/sysinfo-table.jpg)
 ![express-sysinfo chart](/img/sysinfo-chart.jpg)
 
