@@ -47,10 +47,14 @@ Anywhere in the Express app
 
 	app.use(sysInfo({countOnly: true}));
 
-After the auth checks, assuming you are using something like Passport, you can route the viewer:
+After the auth checks, assuming you are using something like Passport (here in the ensureAuthenticated function), you can route the viewer:
 
 	app.use('/sysinfo', ensureAuthenticated, sysInfo({viewOnly: true, returnFormat: 'HTML', viewerUrl: '/'}));
 Note than the viewerUrl is relative to the route hence it's only a single slash to route to https://myserver/sysinfo
+
+![express-sysinfo table](/img/sysinfo-table.jpg)
+![express-sysinfo chart](/img/sysinfo-chart.jpg)
+
 
 ## Using templates
 This is only tested with Handlebars. 
